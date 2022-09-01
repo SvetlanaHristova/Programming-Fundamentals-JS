@@ -29,3 +29,4 @@
 - QA Introduction 
 - Basic Web Project 
 
+![](https://github.com/SvetlanaHristova/Programming-Fundamentals-JS/blob/main/Programming%20Fundamentals%20with%20JavaScript%20-%20May%202022%20-%20Certificate.jpeg)
