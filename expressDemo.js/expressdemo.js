@@ -7,11 +7,10 @@ let app = express();
 app.engine('.hbs',handlebars({
     extname: '.hbs',
 }).engine);
+
 app.set('view.engine', '.hbs');
 app.get('/', (req, res) => {
-    res.send(`<h1>Home Page </h1>
-    <a href="/catalog">Catalog </a>
-    <p>Welcome to our site!`)
+    res.render('home.hbs');
 });
 app.get('/catalog', catalogControlers.catalog);
 app.get(`/catalog/:productID`, catalogControlers.details);

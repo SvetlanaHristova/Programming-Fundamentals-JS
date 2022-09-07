@@ -1,20 +1,27 @@
-let data = {
-    '0001': 'Oil filter',
-    '0002': 'Windshiel wiper',
-    '0003': 'Xenon headlght',
-    '0057': 'Spoiler'
-};
-module.exports={
-    catalog:(req, res) => {
-        res.send(`<h1> Catalog </h1>
-        <a href="/">Home </a>
-        <p> Lisr of product </p>
-            <ul>
-            ${Object.entries(data).map(e => `<li><a href="/catalog/${e[0]}">"${e[1]}"</a ></li >`).join('')}
-            </ul>`)
+let data = [
+    {
+        id: '0001',
+        name:'Oil filter'
+    },
+    {
+        id: '0002',
+        name:'Windshiel wiper'
+    },
+    {
+        id: '0003',
+        name:'Xenon headlght'
+    },
+    {
+        id: '0057',
+        name: 'Spoiler'
+    }
+];
+module.exports = {
+    catalog: (req, res) => {
+        res.render('catalog.hbs',{product: data})
     },
 
-    details:  (req, res) => {
+    details: (req, res) => {
         let product = data[req.params.productID];
         res.send(`<h1> Product Details </h1>
     <a href ="/catalog" > Back to Catalog </a>
