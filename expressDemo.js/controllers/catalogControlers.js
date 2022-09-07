@@ -23,8 +23,7 @@ module.exports = {
 
     details: (req, res) => {
         let product = data[req.params.productID];
-        res.send(`<h1> Product Details </h1>
-    <a href ="/catalog" > Back to Catalog </a>
-    <p> Information about product</p><p>${product}</p>`);
+        let nameOfProduct=data
+        res.render(`product.hbs`,{details: data});
     },
 };
