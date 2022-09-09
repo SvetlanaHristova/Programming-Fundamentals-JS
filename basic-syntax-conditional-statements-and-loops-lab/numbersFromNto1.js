@@ -1,0 +1,6 @@
+function numbersFromNto1(num) {
+    while (num >= 1) {
+        console.log(num);
+        num--;
+    }
+}
