@@ -1,21 +1,8 @@
-function integerAndFloat(a, b, c) {
+function integerAndFloat2(a, b, c) { 
     let sum = a + b + c;
-    let stringOfSum = sum + '';
-    let float = false;
-
-    for (let i = 0; i < stringOfSum.length; i++) {
-        let currentSimbol = stringOfSum[i];
-
-        if (currentSimbol === '.') {
-            console.log(`${sum} - Float`);
-            float = true;
-            break;
-        }
-    }
-
-    if (!float) {
-        console.log(`${sum} - Integer`);
-    }
+    sum % 1 == 0
+        ? console.log(`${sum} - Integer`)
+        : console.log(`${sum} - Float`);
 }
-integerAndFloat(9, 100, 1.1);
-integerAndFloat(100, 200, 303);
+integerAndFloat2(9, 100, 1.1);
+integerAndFloat2(100, 200, 303);
