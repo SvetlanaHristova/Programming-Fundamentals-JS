@@ -1,23 +1,8 @@
-function rightPlace(string1, char, strin2) {
-    let newString = '';
+function rightPlace2(string1, char, string2) {  
+    let newString = string1.replace('_', char);
 
-    for (let i = 0; i < string1.length; i++) {
-        let currentChar = string1[i];
-
-        if (currentChar == '_') {
-            currentChar = char;
-        }
-
-        newString += currentChar;
-    }
-
-    if (newString == strin2) {
-        console.log('Matched');
-    } else {
-        console.log('Not Matched');
-    }
+    newString == string2
+        ? console.log('Matched')
+        : console.log('Not Matched');
 }
-
-rightPlace('Str_ng', 'I', 'Strong');
-rightPlace('Str_ng', 'i', 'String');
-
+rightPlace2('str_ng1', 'E', 'strin2');
