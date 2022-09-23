@@ -1,24 +1,16 @@
-function amazingNumbers(num) {
+function amazingNumbers2(num) { 
     let numToString = num.toString();
-    let sum = 0; 
+    let sum = 0;
 
     for (i = 0; i < numToString.length; i++) {
         sum += Number(numToString[i]);
     }
 
-    let sumToString = sum + "";
-    let digit = 'False'
+    let result = sum.toString().includes('9');
 
-    for (i = 0; i < sumToString.length; i++) {
-        let currentSimbol = sumToString.charAt(i);
-
-        if (currentSimbol == 9) {
-            digit = 'True';
-            break;
-        }
-    }
-    
-    console.log(`${num} Amazing? ${digit}`);
+    console.log(result
+        ? `${num} Amazing? True`
+        : `${num} Amazing? False`)
 }
-amazingNumbers(1233)
-amazingNumbers(999)
+amazingNumbers2(1233)
+amazingNumbers2(999)
